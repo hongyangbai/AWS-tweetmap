@@ -19,8 +19,8 @@ discovery.zen.ping.multicast.enabled: false
 
 path.data: ./tweetdata
 
-cloud.aws.access_key: "AKIAJ65N2RQXWFIYCMXQ"
-cloud.aws.secret_key: "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"
+cloud.aws.access_key: ""
+cloud.aws.secret_key: ""
 
 
 discovery.type: "ec2"
