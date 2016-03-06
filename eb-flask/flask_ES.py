@@ -24,7 +24,16 @@ def run2():
     dp_res = request.form['dropdown']
     selected = dp_res
 
-    res_query = requests.get(ES_addr + '/twitter/tweets/_search?q=text:' + dp_res)
+    query = json.dumps({
+        "size":5000,
+        "query": {
+            "match": {
+                "text": dp_res
+            }
+        }
+    })
+    res_query = requests.get(ES_addr + '/twitter/tweets/_search?', data=query)
+
 
     query_json = json.loads(res_query.text)
 
