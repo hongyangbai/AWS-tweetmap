@@ -1,0 +1,33 @@
+ ======================== Elasticsearch Configuration =========================
+#
+# NOTE: Elasticsearch comes with reasonable defaults for most settings.
+#       Before you set out to tweak and tune the configuration, make sure you
+#       understand what are you trying to accomplish and the consequences.
+#
+# The primary way of configuring a node is via this file. This template lists
+# the most important settings you may want to configure for a production cluster.
+#
+# Please see the documentation for further information on configuration options:
+# <http://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html>
+#
+
+cluster.name: tweet-ES
+
+node.name: tweet-ES-node
+plugin.mandatory: cloud-aws
+discovery.zen.ping.multicast.enabled: false
+
+path.data: ./tweetdata
+
+cloud.aws.access_key: "AKIAJ65N2RQXWFIYCMXQ"
+cloud.aws.secret_key: "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"
+
+
+discovery.type: "ec2"
+discovery.ec2.groups: "elasticsearch cluster"
+discovery.ec2.host_type: "public_ip"
+discovery.ec2.ping_timeout: "30s"
+discovery.ec2.availability_zones: "us-west-2a"
+cloud.aws.region: "us-west"
+
+network.host: _ec2_
