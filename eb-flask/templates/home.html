@@ -1,0 +1,54 @@
+
+<div id="header">
+<h1>TwittMap</h1>
+</div>
+
+
+<div id="section">
+<h1>Tweeter Map, Total tweet {{count}} </h1>
+<h1>Coordinates, {{coord_list[0]}}</h1>
+<head>
+
+</head>
+<body>
+     <style>
+      #map {
+        width: 1000px;
+        height: 400;
+      }
+    </style>
+
+    
+    <div id="map"></div>
+    <script>
+      function initMap() {
+
+
+        var mapDiv = document.getElementById('map');
+        var UScenter = {lat: 40.461881, lng: -99.757229};
+        var map = new google.maps.Map(mapDiv, {
+          center: UScenter,
+          zoom: 4
+        });
+
+
+        var markers = [
+        [42.503454, -92],
+        [39.499633, -88]
+    	];
+
+        for( i = 0; i < markers.length; i++ ) {
+	        var position = new google.maps.LatLng(markers[i][0], markers[i][1]);
+	        marker = new google.maps.Marker({
+	            position: position,
+	            map: map,
+        });
+
+
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
+
+</body>
+</div>
+
