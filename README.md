@@ -8,4 +8,4 @@ tweetToES.py was ran on an EC2 instance to download the tweets from Twitter API 
 
 elasticsearch.yml is the configuration file for the elasticsearch.
 
-The url for our web application is: http://twittmap-first.89svbyfw4e.us-west-2.elasticbeanstalk.com/
+The url for our web application is: http://twittmap-final.89svbyfw4e.us-west-2.elasticbeanstalk.com/
